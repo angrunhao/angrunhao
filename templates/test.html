@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <style>
+        .parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  font-size: 400%
+}
+.parallax::-webkit-scrollbar {
+    display: none;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 100vh 0;
+}
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="parallax">
+        <div class="parallax__layer parallax__layer--back">
+            TEST
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+            TEST
+        </div>
+    </div>
+
+</body>
+
+</html>
