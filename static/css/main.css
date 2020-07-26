@@ -45,11 +45,20 @@ background-size: cover;
   bottom: 0;
   left: 0;
 }
+
 .parallax_layer-base {
   transform: translateZ(0);
   padding: 120vh 0;
 }
+
 .parallax_layer-back {
   transform: translateZ(-1px) scale(2);
   padding: 0;
+}
+
+@media only screen and (max-aspect-ratio: 1/1) {
+.parallax_layer-base {
+  transform: translateZ(0);
+  padding: 30vh 0;
+}
 }
