@@ -1,0 +1,1 @@
+Files are hosted and read directly from Amazon S3 in Heroku deployment

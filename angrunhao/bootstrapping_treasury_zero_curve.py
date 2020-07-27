@@ -6,11 +6,11 @@ import plotly.express as px
 import plotly.graph_objects as go
 import pandas as pd
 
-
 def create_bootstrapping_treasury_zero_curve(server):
-
-    spotData = pd.read_csv("data//bootstrapping_treasury_zero_curve_spotData.csv", index_col=0)
-    forwardData = pd.read_csv("data//bootstrapping_treasury_zero_curve_forwardData.csv", index_col=0)
+    spotDataUrl = "https://angrunhao-data.s3-ap-southeast-1.amazonaws.com/bootstrapping_treasury_zero_curve_spotData.csv"
+    forwardDataUrl = "https://angrunhao-data.s3-ap-southeast-1.amazonaws.com/bootstrapping_treasury_zero_curve_forwardData.csv" 
+    spotData = pd.read_csv(spotDataUrl)
+    forwardData = pd.read_csv(forwardDataUrl)
     ymax = max([max(spotData.max()), max(forwardData.max())])
     ymin = min([min(spotData.min()), min(forwardData.min())])
 
