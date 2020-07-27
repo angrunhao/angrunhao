@@ -9,7 +9,7 @@ def create_app():
         #import routes
         from . import routes
         #import Dash app
-        from .bootstrapping_treasury_zero_curve import create_bootstrapping_treasury_zero_curve
-        app = create_bootstrapping_treasury_zero_curve(app)
+        #from .bootstrapping_treasury_zero_curve import create_bootstrapping_treasury_zero_curve
+        #app = create_bootstrapping_treasury_zero_curve(app)
 
         return app
