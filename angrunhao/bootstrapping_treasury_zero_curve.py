@@ -9,8 +9,10 @@ import pandas as pd
 def create_bootstrapping_treasury_zero_curve(server):
     spotDataUrl = "https://angrunhao-data.s3-ap-southeast-1.amazonaws.com/bootstrapping_treasury_zero_curve_spotData.csv"
     forwardDataUrl = "https://angrunhao-data.s3-ap-southeast-1.amazonaws.com/bootstrapping_treasury_zero_curve_forwardData.csv" 
-    spotData = pd.read_csv(spotDataUrl)
-    forwardData = pd.read_csv(forwardDataUrl)
+    spotData = pd.read_csv(spotDataUrl, index_col = 0)
+    forwardData = pd.read_csv(forwardDataUrl, index_col=0)
+    spotData = spotData.applymap(lambda x: float(x))
+    forwardData = forwardData.applymap(lambda x: float(x))
     ymax = max([max(spotData.max()), max(forwardData.max())])
     ymin = min([min(spotData.min()), min(forwardData.min())])
 
