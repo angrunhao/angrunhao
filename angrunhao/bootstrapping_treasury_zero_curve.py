@@ -1,10 +1,10 @@
+import pandas as pd
 import dash
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
 import plotly.express as px
 import plotly.graph_objects as go
-import pandas as pd
 
 def create_bootstrapping_treasury_zero_curve(server):
     spotDataUrl = "https://angrunhao-data.s3-ap-southeast-1.amazonaws.com/bootstrapping_treasury_zero_curve_spotData.csv"
