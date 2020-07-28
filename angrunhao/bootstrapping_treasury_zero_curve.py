@@ -51,7 +51,7 @@ ymin = min([min(spotData.min()), min(forwardData.min())])
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 
 btzc_app = dash.Dash(__name__,
-                     requests_pathname_prefix="/btzc_app/",
+                     requests_pathname_prefix="/btzc/",
                     external_stylesheets=external_stylesheets)
 
 colors = {'background': '#ece5df', 'text': '#404040'}

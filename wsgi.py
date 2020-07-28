@@ -5,7 +5,7 @@ from angrunhao import flask_app
 from angrunhao.bootstrapping_treasury_zero_curve import btzc_app
 
 application = DispatcherMiddleware(flask_app, {
-    "/btzc_app": btzc_app.server
+    "/btzc": btzc_app.server
 })
 
 #if __name__ == "__main__":
