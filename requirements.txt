@@ -1,5 +1,5 @@
 gunicorn==20.0.4
-heroku==0.1.4
+heroku3==4.2.1
 Flask==1.1.2
 dash==1.13.4
 pandas==1.0.5
