@@ -9,5 +9,4 @@ application = DispatcherMiddleware(flask_app, {
 })
 
 #if __name__ == "__main__":
-#    run_simple('localhost', 8050, application,
-#               use_reloader=True, use_debugger=True, use_evalex=True)
+#    run_simple('localhost', 8050, application)
